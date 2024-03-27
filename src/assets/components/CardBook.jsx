@@ -1,7 +1,10 @@
+import { PiStar } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 const CardBook = ({book}) => {
-    const {image ,tags,bookName,author,category,rating}=book
+    const { bookId,image ,tags,bookName,author,category,rating}=book
     return (
+       <Link to={`/book/${bookId}`}>
         <div>
             <div className="card w-96 bg-base-100 shadow-xl p-5">
   <figure className="h-60"><img src={image} alt="" /></figure>
@@ -23,14 +26,16 @@ const CardBook = ({book}) => {
        <p>
        <div className="rating  gap-2" >
         {rating}
-       
-  <input type="radio" name="rating-1" className="mask mask-star " /></div>
+        <PiStar className="text-2xl"></PiStar>
+
+ </div>
        </p>
     </div>
    
   </div>
 </div>
         </div>
+       </Link>
     );
 };
 
