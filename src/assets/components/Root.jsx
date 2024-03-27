@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
+import Header from "../Header";
 
 const Root = () => {
     return (
         <div>
-            hifnvjrnj
+            <Header></Header>
             <Outlet></Outlet>
         </div>
     );
