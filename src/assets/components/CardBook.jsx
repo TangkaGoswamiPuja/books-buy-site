@@ -12,7 +12,7 @@ const CardBook = ({book}) => {
   <div className="card-body">
   <div className="card-actions text-green-500">
             {tags.map((tag, index) => (
-              <div key={index} className="badge badge-outline">{tag}</div>
+              <div key={index} className="badge badge-success gap-3">{tag}</div>
             ))}
           </div>
     <h2 className="card-title">
