@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveInTheStore } from "./store";
+import { saveInTheWishStore } from "./wish";
 
 const Details = () => {
     const details = useLoaderData();
@@ -16,6 +17,7 @@ const Details = () => {
         toast('Added to read')
     }
     const clickWish =()=>{
+        saveInTheWishStore(idInt)
         toast('Added to wish list')
     }
     return (
