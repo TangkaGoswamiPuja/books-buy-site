@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { getSaveBooks } from "./components/store";
 import AddWish from "./AddWish";
-
+import A from "./A";
 const ListBooks = () => {
     const books = useLoaderData();
 
@@ -18,7 +18,16 @@ const ListBooks = () => {
     }, [])
     return (
         <div>
-            lol {addBooks.length}
+              <div className="text-5xl font-bold flex justify-center bg-gray-200 mt-5 ml-10 mr-10 p-5 rounded-md">
+                Books
+            </div>
+            <div role="tablist" className="tabs tabs-lifted mt-5">
+  <Link  role="tab" className="tab"> Read Books {addBooks.length}</Link>
+  <a role="tab" className="tab tab-active">Wish List book</a>
+ 
+</div>
+<p className="text-3xl font-semibold mt-7">Read Books: {addBooks.length}</p>
+             {addBooks.map(a=><A key={a.id} a={a}></A>)} 
             <AddWish></AddWish>
         </div>
     );

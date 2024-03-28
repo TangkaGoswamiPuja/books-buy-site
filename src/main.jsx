@@ -11,6 +11,7 @@ import ListBooks from './assets/ListBooks';
 import Reading from './assets/Reading';
 import Error from './assets/Error';
 import Details from './assets/components/Details';
+import A from './assets/A';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,8 @@ const router = createBrowserRouter([
       {
         path:"/books",
         element:<ListBooks></ListBooks>,
-        loader:()=>fetch('bookData.json')
+        loader:()=>fetch('bookData.json'),
+
       },{
         path:"/read",
         element:<Reading></Reading>
@@ -37,6 +39,7 @@ const router = createBrowserRouter([
         element:<Details></Details>,
         loader:()=>fetch('bookData.json')
       }
+      
     ]
   },
 ]);
