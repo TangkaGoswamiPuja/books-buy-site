@@ -1,5 +1,5 @@
 const getSaveBooks =()=>{
-    const  storeBooks = localStorage.getItem("book-item")
+    const  storeBooks = localStorage.getItem('book-item')
     if(storeBooks){
         return JSON.parse(storeBooks)
 
@@ -8,12 +8,12 @@ const getSaveBooks =()=>{
 }
 
 const saveInTheStore = bookId =>{
-storeBook=getSaveBooks()
+const storeBook=getSaveBooks()
 
 const check =storeBook.find(saveId=>saveId === bookId)
 if(!check){
     storeBook.push(bookId)
-    localStorage.setItem("book-item",JSON.stringify
+    localStorage.setItem('book-item',JSON.stringify
     (storeBook))
 
 }

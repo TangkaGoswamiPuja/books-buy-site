@@ -12,7 +12,7 @@ const Details = () => {
     const { image, tags, bookName, author, category, rating, review, totalPages, publisher, yearOfPublishing } = detail
 
     const clickRead=()=>{
-        saveInTheStore(bookId)
+        saveInTheStore(idInt);
         toast('Added to read')
     }
     const clickWish =()=>{
